@@ -89,6 +89,9 @@ public class stringBuffer {
 		sb12.setCharAt(0, 'N');
 		sb12.setCharAt(3, 'T');
 		System.out.println(sb12);
+		
+		
+		//StringBuilder class have the same constructors and methods as StringBuffer
 
 	}
 
