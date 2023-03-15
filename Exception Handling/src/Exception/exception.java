@@ -1,7 +1,46 @@
 package Exception;
 
+import java.io.IOException;
+import java.util.Scanner;
+
 public class exception {
-	public void main(String[] args) {
-		
+	public static void main(String[] args) throws Exception {
+		Scanner sc = new Scanner(System.in);
+
+		// "throw" keyword
+		int mark;
+		mark = sc.nextInt();
+		if (mark > 100 || mark < 0) {
+			throw new RuntimeException("Invalid value");
+			// mark = 52; ---> We can't write anything immediately after "throw" keyword
+			// because program never reaches here
+		}
+		if (mark == 50) {
+			mark = 100 / 0;// we have arithmetic exception here
+			System.out.println(mark);// but compiler is so dumb that it will not recognize the exception
+			// that's why we can still use statements after built-in exception, even it will
+			// never be reached
+		}
+		if (mark == 60) {
+			add();
+		}
+
+		// try-catch-finally
+		try {
+			int i = 100 / 0;
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println();
+			System.out.println(e);
+			System.out.println();
+			System.out.println(e.getMessage());
+		}
+
+	}
+
+	static void add() throws IOException {// intention of "throws" keyword is to bypass the generated
+											// exception from present method to caller method
+		throw new IOException("My exception");
 	}
 }
