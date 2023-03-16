@@ -25,7 +25,7 @@ public class exception {
 			add();
 		}
 
-		// try-catch-finally
+		// try-catch
 		try {
 			int i = 100 / 0;
 
@@ -37,10 +37,49 @@ public class exception {
 			System.out.println(e.getMessage());
 		}
 
+		// try-catch-finally
+		mark = tryCatch();
+		System.out.println(mark);
+
+		// try-catch-finally with multiple catch
+		try {
+
+		} catch (ArithmeticException e) {
+
+		} catch (NullPointerException e) {
+
+		} catch (ArrayIndexOutOfBoundsException e) {
+
+		}
+
+		// if exceptions are related, they should be arranged in order
+		try {
+
+		} catch (ArithmeticException e) {
+
+		} catch (RuntimeException e) {
+
+		} catch (Exception e) {
+
+		} catch (Throwable e) {
+
+		}
+
 	}
 
 	static void add() throws IOException {// intention of "throws" keyword is to bypass the generated
 											// exception from present method to caller method
 		throw new IOException("My exception");
+	}
+
+	static int tryCatch() {
+		try {
+			return 10;
+		} catch (Exception e) {
+			return 20;
+		} finally {
+			return 30;
+		}
+		// return 40; ---> unreachable statement
 	}
 }
