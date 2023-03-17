@@ -1,6 +1,8 @@
 package Exception;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class exception {
@@ -62,6 +64,28 @@ public class exception {
 		} catch (Exception e) {
 
 		} catch (Throwable e) {
+
+		}
+
+		// multi-catch block
+		try {
+
+		} catch (ArithmeticException | ArrayIndexOutOfBoundsException | NullPointerException e) {
+
+		} // here all exception should be independent, not related to each other
+
+//		try { 
+//		  
+//		} catch (Exception|ArithmeticException e) { ---> error
+//			
+//		}
+
+		// try-with-resources
+		try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in));) {
+			System.out.println("Enter data");
+			String data = br.readLine();
+			System.out.println(data);
+		} catch (Exception e) {
 
 		}
 
