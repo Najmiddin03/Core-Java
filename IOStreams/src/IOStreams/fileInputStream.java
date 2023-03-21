@@ -65,6 +65,7 @@ public class fileInputStream {
 		}
 		System.out.println("\"neo\": " + count);
 		fr.close();
+		sc.close();
 
 	}
 
