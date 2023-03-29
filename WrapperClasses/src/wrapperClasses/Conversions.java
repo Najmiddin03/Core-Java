@@ -1,8 +1,10 @@
 package wrapperClasses;
 
+import java.io.IOException;
+
 public class Conversions {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		// Primitive to object
 		int i = 10;
 		// 1)
