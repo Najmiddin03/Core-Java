@@ -1,4 +1,4 @@
-package NavigableSet;
+package Set.SortedSet.NavigableSet;
 
 import java.util.NavigableSet;
 import java.util.TreeSet;

@@ -1,9 +1,10 @@
-package HashSet;
+package Set.HashSet;
 
 import java.util.HashSet;
 
 public class Main {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		// Constructors
 		// Cons - 1

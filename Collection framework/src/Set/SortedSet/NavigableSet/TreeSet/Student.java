@@ -1,4 +1,4 @@
-package TreeSet;
+package Set.SortedSet.NavigableSet.TreeSet;
 
 public class Student implements Comparable<Student> {
 
