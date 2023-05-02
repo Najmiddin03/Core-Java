@@ -5,7 +5,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 
-public class Main {
+public class Class_ {
 
 	@SuppressWarnings({ "rawtypes", "unused" })
 	public static void main(String[] args) throws Exception {
@@ -13,7 +13,7 @@ public class Main {
 		// First way
 		Class c1 = Class.forName("Class.A");
 		// Second way
-		A a = new A();
+		A a = new A("", 1);
 		Class c2 = a.getClass();
 		// Third way
 		Class c3 = A.class;
