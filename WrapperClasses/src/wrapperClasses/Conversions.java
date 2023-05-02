@@ -4,6 +4,7 @@ import java.io.IOException;
 
 public class Conversions {
 
+	@SuppressWarnings("removal")
 	public static void main(String[] args) throws IOException {
 		// Primitive to object
 		int i = 10;
